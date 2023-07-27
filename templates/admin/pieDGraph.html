@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   <title>Piegraph</title>
+<link rel="icon" href="https://img.uxwing.com/wp-content/themes/uxwing/download/nature-environment-ecology/environment-icon.png" sizes="30*30">
+      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
+      <script src = "https://code.highcharts.com/highcharts.js"></script>  
+       <style>
+body{
+ display:flex;
+ min-height: 100vh;
+ background: url('https://www.kalmondolgin.com/wp-content/uploads/2020/01/marcin-jozwiak-uKvPDQop-JA-unsplash-1024x682.jpg')no-repeat;
+ background-size: 100% 100%;;
+ background-position:center;
+ background-attachment: fixed;
+}
+
+</style>
+   </head>
+   
+   <body>
+      <div id = "container" style = "width: 900px; height: 600px; margin: 0 auto"></div>
+      <script language = "JavaScript">
+         $(document).ready(function() {
+            var chart = {
+               plotBackgroundColor: null,
+               plotBorderWidth: null,
+               plotShadow: false
+            };
+            var title = {
+               text: 'Carbon Foot print with Climate Change'   
+            };      
+            var tooltip = {
+               pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            };
+            var plotOptions = {
+               pie: {
+                  allowPointSelect: true,
+                  cursor: 'pointer',
+                  
+                  dataLabels: {
+                     enabled: false           
+                  },
+                  
+                  showInLegend: true
+               }
+            };
+            var series = [{
+               type: 'pie',
+               name: 'Marks',
+               data: [
+                  ["China", 27.2],
+                  ["United States of America", 15.6],
+                  ["India", 6.3],
+                  ["Russion Federation", 4.6],
+                  ["Japan", 3.9],
+                  ["Germany", 2.3],
+                  ["Maxico", 1.8],
+                  ["Korea", 1.7],
+                  ["United Kingdom", 1.7],
+                  ["Brazil", 1.5],
+                  ["Rest of the World", 33.4]
+               ]
+            }];     
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;     
+            json.tooltip = tooltip;  
+            json.series = series;
+            json.plotOptions = plotOptions;
+            $('#container').highcharts(json);  
+         });
+      </script>
+   </body>
+   
+</html>
