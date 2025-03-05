@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+ 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url("https://cdn.dribbble.com/users/1551941/screenshots/6346538/thankyoudribble.gif");
+    background-repeat: no-repeat;
+    background-size: 1600px 800px;
+    /*background: cornflowerblue;*/
+}
+.wrapper{
+    display: inline-flex;
+}
+.wrapper .static-txt{
+    color:  #007497;
+    font-size: 60px;
+    font-weight: 400;
+}
+.wrapper .dynamic-txts{
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+.dynamic-txts li{
+    color: #000;
+    list-style: none;
+    font-size: 60px;
+    font-weight: 500;
+}
+.dynamic-txts li{
+    position: relative;
+}
+.dynamic-txts li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    border-left: 2px solid #000;
+    animation: typing 2.5s steps(20) infinite;
+}
+
+@keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+
+.break{
+    word-break: break;
+}
+
+.button {
+    background-color:  #007497;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#div1
+{
+    height: 30px;
+}
+    </style>
+    </head>
+    <body>
+        <div class="break">
+        <div class="wrapper">
+            <ul class="dynamic-txts">
+                <li><span>Check Email</span></li>
+            </ul>
+           
+           
+        </div>
+        
+        <center>
+
+        <div><p>Payment Verification link is send on your email</p></div>
+
+        <div class="container" id="div1">
+            <h1 class="text-center "></h1>
+        </div>
+       
+        <div class="container" >
+            <a href="/user_index"><button class="button">Go to home</button></a>
+        </div>
+        </center>
+    </div>
+    </body>
+</html>

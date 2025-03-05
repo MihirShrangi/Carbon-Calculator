@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   <title>Linegraph</title>
+<link rel="icon" href="https://img.uxwing.com/wp-content/themes/uxwing/download/nature-environment-ecology/environment-icon.png" sizes="30*30">
+      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
+      <script src = "https://code.highcharts.com/highcharts.js"></script> 
+       <style>
+body{
+ display:flex;
+ min-height: 100vh;
+ background: url('https://www.kalmondolgin.com/wp-content/uploads/2020/01/marcin-jozwiak-uKvPDQop-JA-unsplash-1024x682.jpg')no-repeat;
+ background-size: 100% 100%;;
+ background-position:center;
+ background-attachment: fixed;
+}
+
+
+</style>
+   </head>
+   
+   <body>
+      <div id = "container" style = "width: 900px; height: 600px; margin: 0 auto"></div>
+      <script language = "JavaScript">
+         $(document).ready(function() {
+            var title = {
+               text: 'Sector-wise trends in CO2 emissions from energy use (energy-CO2 emissions) in India'   
+            };
+            var subtitle = {
+               text: 'Source: Site'
+            };
+            var xAxis = {
+               categories: ["Power","Industry","Transport","Agriculture","Others"]
+            };
+            var yAxis = {
+               title: {
+                  text: 'Range'
+               },
+               plotLines: [{
+                  value: 0,
+                  width: 1,
+                  color: '#808080'
+               }]
+            };   
+            var tooltip = {
+               valueSuffix: ''
+            }
+            var legend = {
+               layout: 'vertical',
+               align: 'right',
+               verticalAlign: 'middle',
+               borderWidth: 0
+            };
+            var series =  [{
+                  name: 'Year 2010',
+                  data: [800, 210, 100, 20, 15]
+               }, 
+               {
+                  name: 'Year 2015 onwards',
+                  data: [1000, 510, 280, 35, 20]
+               }, 
+               {
+                  name: 'Year 2020 onwarsd',
+                  data: [1200, 800, 400, 50, 25]
+               }
+            ];
+
+            var json = {};
+            json.title = title;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;
+            json.tooltip = tooltip;
+            json.legend = legend;
+            json.series = series;
+            
+            $('#container').highcharts(json);
+         });
+      </script>
+      
+      
+   </body>
+   
+</html>

@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,200;1,300;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+ justify-content: center;
+ align-items: center;
+ min-height: 100vh;
+ background: url('images/marcin-jozwiak-uKvPDQop-JA-unsplash.jpg')no-repeat;
+ background-size: cover;
+ background-position:center;
+ background-attachment: fixed;
+}
+
+
+.container{
+    width: 90%;
+    margin: auto;
+    margin-top: 130px;
+    padding: 20px;
+    display: none;
+}
+
+.display{
+    border: 2px solid #131513;
+    background-color: #09c5ef;
+}
+section{
+    border: 2px solid #131513;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 10 px 0;
+    background-color: aliceblue;
+}
+
+label{
+    display: block;
+    padding: 7px;
+    border-radius: 7px;
+    cursor: pointer;
+    border: 1 px dashed #ccc;
+    margin-bottom: 3px;
+}
+
+label:hover{
+    background: #09b637;
+}
+
+
+.button {
+    background-color: #021e09;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .button:hover {
+    background-color: rgb(103, 107, 216);
+    color: white;
+  }
+
+
+  header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    background: #c28e3a;
+}
+.loggo{
+    font-size: 2em;
+    color: rgb(15, 14, 14);
+    user-select: none;
+}
+
+.navigation
+{
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+}
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: #0c0b0b;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #0d0404;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.navigation .btnlogin-popup{
+    width: 130px;
+    height : 50px;
+    background: transparent;
+    border: 2px solid #ffffff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #070707;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navigation .btnlogin-popup:hover{
+    background: white;
+    color: #000000;
+}
+
+.menu > li {
+    float: left;
+    color: black;
+    width: 140px;
+    height: 40px;
+    line-height: 40px;
+    background: transparent;
+    cursor: pointer;
+    font-size: 17px;
+    list-style: none;
+   }
+   
+   .sub-menu {
+    transform: scale(0);
+    transform-origin: top center;
+    transition: all 300ms ease-in-out;
+    list-style-type: none;
+    
+    
+   }
+   
+   
+   .sub-menu li {
+    font-size: 14px;
+    background: transparent;
+    color: transparent;
+    border-bottom: 1px solid rgba(255,255,255, 0.2);
+    display: none;
+    transform: scale(0);
+    transform-origin: top center;
+    transition: all 300ms ease-in-out;
+    
+   }
+   
+   .sub-menu li:last-child {
+    border-bottom: 0;
+   }
+   
+   
+   .sub-menu li:hover {
+    background: transparent;
+   }
+   
+   
+   .menu > li:hover .sub-menu li{
+    display: block;
+    transform: scale(1);
+   }
+   
+   
+   .menu > li:hover .sub-menu {
+    transform: scale(1);
+   } 
+   
+    .para{
+      display: grid;
+      background: transparent;
+      border: 2px solid black;
+      border-radius: 8%;
+      font-family:'Times New Roman', Times, serif;
+      font-size: 25px;
+      margin-left: 2%;
+      margin-right: 5%;
+      padding-top: 0%;
+      padding-left: 2%;
+      padding-right: 5%;
+      
+   }
+
